@@ -1,0 +1,284 @@
+:root {
+  /* Colors — warm parchment palette with forest green accent */
+  --color-bg: #faf8f5;
+  --color-bg-elevated: #ffffff;
+  --color-bg-nav: rgba(250, 248, 245, 0.92);
+  --color-text-primary: #1a1714;
+  --color-text-secondary: #4a4640;
+  --color-text-tertiary: #6a6560;
+  --color-text-muted: #8a8478;
+  --color-accent: #005237;
+  --color-accent-hover: #003d28;
+  --color-border: #e8e4de;
+  --color-border-subtle: #f0ece6;
+
+  /* Category colors */
+  --color-cat-policy-bg: rgba(0, 82, 55, 0.08);
+  --color-cat-policy-text: #005237;
+  --color-cat-policy-border: rgba(0, 82, 55, 0.18);
+  --color-cat-opinion-bg: rgba(142, 55, 0, 0.08);
+  --color-cat-opinion-text: #8e3700;
+  --color-cat-opinion-border: rgba(142, 55, 0, 0.18);
+  --color-cat-analysis-bg: rgba(0, 51, 120, 0.08);
+  --color-cat-analysis-text: #003378;
+  --color-cat-analysis-border: rgba(0, 51, 120, 0.18);
+  --color-cat-technology-bg: rgba(88, 0, 120, 0.08);
+  --color-cat-technology-text: #580078;
+  --color-cat-technology-border: rgba(88, 0, 120, 0.18);
+  --color-cat-security-bg: rgba(120, 0, 20, 0.08);
+  --color-cat-security-text: #780014;
+  --color-cat-security-border: rgba(120, 0, 20, 0.18);
+  --color-cat-strategy-bg: rgba(50, 50, 0, 0.08);
+  --color-cat-strategy-text: #3a3a00;
+  --color-cat-strategy-border: rgba(50, 50, 0, 0.18);
+
+  /* Typography — loaded via next/font, CSS vars set as class names */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+  --font-ui: "DM Sans", system-ui, sans-serif;
+
+  /* Spacing */
+  --content-width: 860px;
+  --nav-height: 56px;
+}
+
+/* ===== Dark mode ===== */
+[data-theme="dark"] {
+  --color-bg: #141210;
+  --color-bg-elevated: #1e1c18;
+  --color-bg-nav: rgba(20, 18, 16, 0.92);
+  --color-text-primary: #e8e4de;
+  --color-text-secondary: #b0a99e;
+  --color-text-tertiary: #8a8478;
+  --color-text-muted: #6a6560;
+  --color-accent: #3dae85;
+  --color-accent-hover: #5fc9a2;
+  --color-border: #2a2622;
+  --color-border-subtle: #221f1b;
+
+  --color-cat-policy-bg: rgba(61, 174, 133, 0.12);
+  --color-cat-policy-text: #3dae85;
+  --color-cat-policy-border: rgba(61, 174, 133, 0.25);
+  --color-cat-opinion-bg: rgba(210, 120, 60, 0.12);
+  --color-cat-opinion-text: #d2783c;
+  --color-cat-opinion-border: rgba(210, 120, 60, 0.25);
+  --color-cat-analysis-bg: rgba(80, 140, 220, 0.12);
+  --color-cat-analysis-text: #508cdc;
+  --color-cat-analysis-border: rgba(80, 140, 220, 0.25);
+  --color-cat-technology-bg: rgba(160, 100, 200, 0.12);
+  --color-cat-technology-text: #a064c8;
+  --color-cat-technology-border: rgba(160, 100, 200, 0.25);
+  --color-cat-security-bg: rgba(200, 80, 90, 0.12);
+  --color-cat-security-text: #c8505a;
+  --color-cat-security-border: rgba(200, 80, 90, 0.25);
+  --color-cat-strategy-bg: rgba(180, 180, 60, 0.12);
+  --color-cat-strategy-text: #b4b43c;
+  --color-cat-strategy-border: rgba(180, 180, 60, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.65;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Article prose styles for MDX content */
+.article-prose {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+  max-width: 680px;
+}
+
+.article-prose h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 48px 0 16px;
+  line-height: 1.2;
+}
+
+.article-prose h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 36px 0 12px;
+  line-height: 1.25;
+}
+
+.article-prose p {
+  margin-bottom: 20px;
+}
+
+.article-prose blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 20px;
+  margin: 32px 0;
+  font-style: italic;
+  color: var(--color-text-tertiary);
+}
+
+.article-prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.article-prose a:hover {
+  color: var(--color-accent-hover);
+}
+
+.article-prose ul,
+.article-prose ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.article-prose li {
+  margin-bottom: 8px;
+}
+
+.article-prose strong {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.article-prose hr {
+  border: none;
+  height: 1px;
+  background: var(--color-border);
+  margin: 48px 0;
+}
+
+.article-prose sup {
+  font-size: 0.75em;
+  color: var(--color-accent);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(0, 82, 55, 0.15);
+}
+
+[data-theme="dark"] ::selection {
+  background: rgba(61, 174, 133, 0.25);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.fade-in-up-delay-1 {
+  animation: fadeInUp 0.6s ease 0.1s forwards;
+  opacity: 0;
+}
+
+.fade-in-up-delay-2 {
+  animation: fadeInUp 0.6s ease 0.2s forwards;
+  opacity: 0;
+}
+
+.fade-in-up-delay-3 {
+  animation: fadeInUp 0.6s ease 0.3s forwards;
+  opacity: 0;
+}
+
+/* ===== Print stylesheet (#13) ===== */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  nav,
+  footer,
+  section,
+  .no-print,
+  button {
+    display: none !important;
+  }
+
+  .article-prose {
+    max-width: 100%;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  .article-prose h2 {
+    color: black !important;
+    font-size: 18pt;
+    margin-top: 24pt;
+    page-break-after: avoid;
+  }
+
+  .article-prose h3 {
+    color: black !important;
+    font-size: 14pt;
+    page-break-after: avoid;
+  }
+
+  .article-prose blockquote {
+    border-left: 2pt solid #333;
+    color: #333 !important;
+  }
+
+  .article-prose a {
+    color: black !important;
+    text-decoration: underline;
+  }
+
+  .article-prose a::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  a[href^="mailto"]::after,
+  a[href^="/"]::after {
+    content: "";
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}
