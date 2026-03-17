@@ -154,6 +154,35 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             <span style={{ opacity: 0.4 }}>&middot;</span>
             <span>{article.readTime}</span>
           </div>
+
+          {/* Tags */}
+          {article.tags && article.tags.length > 0 && (
+            <div
+              style={{
+                display: "flex",
+                gap: "8px",
+                flexWrap: "wrap",
+                marginTop: "16px",
+              }}
+            >
+              {article.tags.map((tag) => (
+                <span
+                  key={tag}
+                  style={{
+                    fontFamily: "var(--font-ui)",
+                    fontSize: "11px",
+                    color: "var(--color-text-muted)",
+                    background: "var(--color-border-subtle)",
+                    padding: "3px 10px",
+                    borderRadius: "3px",
+                    letterSpacing: "0.02em",
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </header>
 
         {/* Article body */}

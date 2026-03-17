@@ -32,6 +32,10 @@ export default function JsonLd({ article }: JsonLdProps) {
     url: `${SITE_URL}/articles/${article.slug}`,
     mainEntityOfPage: `${SITE_URL}/articles/${article.slug}`,
     articleSection: article.category,
+    ...(article.tags &&
+      article.tags.length > 0 && {
+        keywords: article.tags.join(", "),
+      }),
     ...(article.publication && {
       isPartOf: {
         "@type": "PublicationIssue",

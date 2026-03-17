@@ -9,6 +9,7 @@ export interface ArticleFrontmatter {
   featured?: boolean;
   coAuthor?: string;
   image?: string;
+  tags?: string[];
 }
 
 export interface Article extends ArticleFrontmatter {
