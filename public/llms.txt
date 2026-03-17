@@ -7,12 +7,12 @@ Senior Digital Sovereignty Advisor at Levio and CEO of the Sovereign Data Allian
 
 ## Articles
 
-- [Digital Sovereignty Is the New Sovereignty: Canada Can Lead the Middle Power Vanguard](/articles/digital-sovereignty-vanguard): Why Canada's moment to architect a coalition of technologically sovereign middle powers has arrived — and what it must do to seize it.
-- [Sovereignty That Can Take a Punch](/articles/sovereignty-that-can-take-a-punch): Responding to PM Carney's sovereignty doctrine: why resilience, not rhetoric, defines a nation's digital autonomy in the age of AI.
-- [Architect of the New Autonomy: A Ministerial Briefing on Canada's Middle-Power Coalition](/articles/architect-new-autonomy): Synthesizing digital sovereignty, energy-to-compute transformation, and geopolitical frameworks into a coherent national strategy.
-- [The Sovereign Bridge: Why External Data Reshapes the AI Infrastructure Calculus](/articles/sovereign-bridge): A reverse analysis showing that ~60% of ministerial question-answering needs come from external sources — reframing sovereign cloud as bridge, not fortress.
-- [Q-Day and the Harvest: Preparing Canada for Post-Quantum Cryptographic Transition](/articles/q-day-and-the-harvest): Nation-state actors are harvesting encrypted data today for quantum decryption tomorrow. How Canada's critical infrastructure must prepare.
-- [Variable Geometry Coalitions and the Greengrocer's Dilemma](/articles/variable-geometry-coalitions): On Havel's metaphor, Carney's Davos speech, and why digital sovereignty demands rupture — not transition.
+- [Digital Sovereignty Is the New Sovereignty: Canada Can Lead the Middle Power Vanguard](https://richardstpierre.com/articles/digital-sovereignty-vanguard): Why Canada's moment to architect a coalition of technologically sovereign middle powers has arrived — and what it must do to seize it.
+- [Sovereignty That Can Take a Punch](https://richardstpierre.com/articles/sovereignty-that-can-take-a-punch): Responding to PM Carney's sovereignty doctrine: why resilience, not rhetoric, defines a nation's digital autonomy in the age of AI.
+- [Architect of the New Autonomy: A Ministerial Briefing on Canada's Middle-Power Coalition](https://richardstpierre.com/articles/architect-new-autonomy): Synthesizing digital sovereignty, energy-to-compute transformation, and geopolitical frameworks into a coherent national strategy.
+- [The Sovereign Bridge: Why External Data Reshapes the AI Infrastructure Calculus](https://richardstpierre.com/articles/sovereign-bridge): A reverse analysis showing that ~60% of ministerial question-answering needs come from external sources — reframing sovereign cloud as bridge, not fortress.
+- [Q-Day and the Harvest: Preparing Canada for Post-Quantum Cryptographic Transition](https://richardstpierre.com/articles/q-day-and-the-harvest): Nation-state actors are harvesting encrypted data today for quantum decryption tomorrow. How Canada's critical infrastructure must prepare.
+- [Variable Geometry Coalitions and the Greengrocer's Dilemma](https://richardstpierre.com/articles/variable-geometry-coalitions): On Havel's metaphor, Carney's Davos speech, and why digital sovereignty demands rupture — not transition.
 
 ## Author
 
