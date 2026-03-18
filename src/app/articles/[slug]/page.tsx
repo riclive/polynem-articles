@@ -22,6 +22,8 @@ export async function generateStaticParams() {
   return getArticleSlugs().map((slug) => ({ slug }));
 }
 
+const SITE_URL = "https://richardstpierre.com";
+
 export async function generateMetadata({
   params,
 }: ArticlePageProps): Promise<Metadata> {
@@ -29,16 +31,43 @@ export async function generateMetadata({
   const article = getArticleBySlug(slug);
   if (!article) return {};
 
+  const articleUrl = `${SITE_URL}/articles/${slug}`;
+  const ogImageUrl = `${SITE_URL}/articles/${slug}/opengraph-image`;
+
   return {
     title: article.title,
     description: article.summary,
     authors: [{ name: article.author }],
+    alternates: {
+      canonical: articleUrl,
+    },
     openGraph: {
-      title: article.title,
-      description: article.summary,
+      title: article.title.length > 70
+        ? article.title.substring(0, 67) + "..."
+        : article.title,
+      description: article.summary.length > 200
+        ? article.summary.substring(0, 197) + "..."
+        : article.summary,
       type: "article",
+      url: articleUrl,
       publishedTime: article.date,
       authors: [article.author],
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title.length > 70
+        ? article.title.substring(0, 67) + "..."
+        : article.title,
+      description: article.summary,
+      images: [ogImageUrl],
     },
   };
 }
