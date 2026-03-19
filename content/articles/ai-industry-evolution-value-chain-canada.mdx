@@ -1,0 +1,261 @@
+---
+title: "AI Industry Evolution and Value Chain for Canada"
+date: "2026-03-18"
+category: "Analysis"
+author: "Richard St-Pierre"
+publication: "Polynem Working Paper"
+summary: "Canada's AI ambitions face a critical disconnect: while data center investment is booming, less than 2% of global AI-grade GPU clusters reside on Canadian soil. This analysis maps the full AI value chain — from energy supply through hardware, algorithms, and applications — and argues that measuring capacity in megawatts rather than GPU petaflops conceals Canada's true competitive position. Five strategic recommendations target the gaps across the stack, from treating AI compute as national infrastructure to building sovereign language models and modernizing procurement for AI-era realities."
+readTime: "40 min read"
+featured: true
+tags:
+  - ai-infrastructure
+  - ai-value-chain
+  - gpu-compute
+  - sovereign-cloud
+  - energy-to-compute
+  - canada
+  - ai-policy
+  - productivity
+dateModified: "2026-03-18"
+---
+
+> **Key finding:** Less than 2% of global AI-grade GPU clusters are located in Canada. Despite a rapidly growing data center market, raw megawatts is a misleading metric — GPU-equipped capacity is what determines a nation's true AI competitiveness.
+
+## The AI Landscape Before 2022
+
+Artificial Intelligence has undergone several waves of progress, but the period up to 2022 can be seen as a foundational epoch that set the stage for today's rapid advances. Early breakthroughs in machine learning (e.g. deep neural networks, convolutional nets) around the 2010s demonstrated AI's potential in labs and niche applications. Critically, this era saw GPUs (graphics processing units) emerge as the workhorse for AI computation, enabling the training of complex models that CPUs could not handle efficiently. By the late 2010s, major tech firms and research institutions were leveraging GPUs to achieve milestone results in image recognition, speech recognition, and language modelling.
+
+The advent of large-scale deep learning models like transformers (the architecture behind modern language models) hinted at the productivity leap AI could provide. However, prior to 2022, these efforts, while impressive, were limited in industrial-scale deployment. Most AI implementations were small-scale or experimental, and the infrastructure supporting AI — from data centers to algorithms — was still developing.
+
+Importantly, the AI value chain was not yet fully recognized as an integrated ecosystem. Many organizations viewed AI as a software innovation or research endeavour rather than a sector requiring end-to-end infrastructure. Data centers largely remained optimized for traditional enterprise and cloud computing (CPU-driven), with only pockets of GPU-centric clusters for specialized AI and high-performance computing tasks. AI training of models was typically constrained to research labs or tech giants, and real-world inference (using AI models in practice) was modest — think voice assistants or recommendation engines — impactful, but not yet transformative at a national economic scale.
+
+This was the epoch of narrow AI applications and foundational research. It ended around 2022 with a convergence of factors: the maturation of AI algorithms, the availability of massive datasets, and crucially, the impending scale-up of computational power using GPUs and advanced chips. These elements would combine to propel AI into a new, industry-shaping phase.
+
+In summary, by 2022 AI had proven its promise through research breakthroughs and pilot applications, but it had not yet redefined industries or national productivity at scale. The stage was set — with GPUs providing the raw horsepower — for an explosion in AI capabilities and deployment in the years that followed. This context is important for understanding the evolution of the AI industry from 2022 onward, and why the next era would require viewing AI along two critical axes: (1) the types of AI workloads (training vs. inference, generative conversational AI vs. analytic AI, etc.), and (2) the full stack of enabling resources (from energy and hardware up through models and applications).
+
+## The AI Industry (2022–2030): Types of AI and the Full Stack
+
+From 2022 to 2030, the AI industry is experiencing an unprecedented acceleration. This section examines its evolution along two dimensions: the types of AI activities (from model training to inference and specialized applications like conversational AI), and the AI value chain stack (spanning energy supply, data center infrastructure, specialized hardware like GPUs, algorithms/models, and end-user applications). Understanding these will illuminate how value is created and captured in modern AI — and what is required for national competitiveness.
+
+### Types of AI Workloads: Training, Inference, and Beyond
+
+Six distinct workload categories now define the AI compute landscape, each with different infrastructure requirements, cost structures, and scaling dynamics:
+
+- **AI Model Training (Frontier & Fine-tuning).** Extreme parallelism on GPU clusters; cost levers include accelerator performance, power price, and algorithmic efficiency.
+- **Inference (Serving at Scale).** Continuous, latency-sensitive serving at scale; cost levers include quantization, batching, distillation, and caching.
+- **Conversational and Generative AI.** Real-time LLM interactions; emphasis on retrieval-augmented generation (RAG), guardrails, and small specialized models for cost control.
+- **Agentic and Autonomous AI.** Multi-step planning and tool use; reliability and security gating are essential for autonomous operation.
+- **Perception and Analytics.** Vision, speech, embeddings, and recommendations; often mid-scale with compression and pruning opportunities.
+- **Edge and On-Device AI.** Privacy and latency benefits; compact models on NPUs/GPUs with compiled kernels and on-device caching.
+
+### AI Model Training at Scale
+
+Training refers to the computationally intensive process of teaching AI models from data. Since 2022, the scale of AI training has grown exponentially. Companies now routinely train foundation models — such as large language models (LLMs) or image generation models — that consist of hundreds of billions or even trillions of parameters. Training these models demands vast computing resources: it often requires thousands of GPU chips running in parallel for weeks or months.
+
+Training now sits at the intersection of software innovation and heavy industrial capability. It not only requires clever algorithms but also enormous quantities of electricity and highly specialized facilities. A top-tier training run might consume millions of watt-hours of energy and utilize chips collectively performing on the order of exaFLOPs (10¹⁸ operations per second) during the training period.¹ ²
+
+Critically, training workloads push the envelope of hardware architecture. They demand high memory bandwidth, fast interconnects between GPUs, and efficient cooling for racks drawing tens of kilowatts each. The market has responded with specialized hardware: NVIDIA's high-end A100 and H100 GPU accelerators (and their successors) became the de facto standard for training large models in this era, while alternatives like Google's TPU and various AI chips from startups (Graphcore, Cerebras, etc.) also emerged.
+
+By 2025, training a frontier model is not just a computer science endeavour but an exercise in logistics and engineering, requiring planning of power supply and cooling at data centers, procurement of scarce accelerator hardware, and often multi-million-dollar budgets. The era 2022–2030 marks training as a semi-industrial activity — one that historically only a few large companies (and nations) could execute, though trends like open-source models and consortium efforts are attempting to democratize it.
+
+### AI Inference and Deployment
+
+If training is akin to building a powerful engine, inference is using that engine to perform tasks in real time. Inference involves deploying trained AI models to generate predictions, answers, or other outputs for users. This side of AI has exploded since 2022, particularly with the rise of generative AI services. Unlike training — which is a background, occasional task — inference happens continuously as end-users interact with AI models.
+
+> **Key finding:** A single generative AI prompt can consume 10× to 100× more electricity than a typical web search. As AI applications grew, inference demand began driving significant expansion in data center capacity.
+
+The industry quickly realized that serving millions of queries or generative requests to an AI model can equal or even exceed the cost of initially training it. Each user query to a large language model (like asking ChatGPT a question) might activate billions of calculations across multiple GPUs.³
+
+Starting around 2023, major AI providers shifted focus to optimize inference — making it faster and cheaper — because the volume of usage was skyrocketing. OpenAI's recent initiatives highlight the centrality of inference: OpenAI announced plans for large-scale data center capacity devoted largely to inference workloads. One prominent example is OpenAI's "Stargate" project expansion to a massive data center in the UAE, where OpenAI committed to use about 1 gigawatt of capacity — with an initial 200 megawatts dedicated to clusters of NVIDIA's latest GPUs for high-volume, low-cost inference serving.⁴
+
+To put this in perspective, 200 MW of cutting-edge GPU infrastructure is on the order of 100,000 top-tier GPUs deployed in one location.⁵ This reflects how inference has become a large-scale, power-hungry operation in its own right.
+
+Analysts project that as power-intensive AI deployments grow, global data center electricity consumption could roughly double between 2025 and 2030, largely due to AI workloads.⁶ ⁷
+
+### Conversational and Generative AI Applications
+
+The launch of OpenAI's ChatGPT in late 2022 was a watershed moment — it showcased an AI system conversing at a level close to human-like fluency on an endless array of topics. This breakthrough popularized AI to hundreds of millions of users almost overnight and demonstrated the disruptive potential of generative AI. Conversational AI is essentially an inference workload (running an LLM to produce dialogue), but it triggered unique industry dynamics: it created mass consumer demand for AI interactions, forced many industries to rethink customer service and knowledge work, and spurred an arms race among AI labs and companies to build ever more capable conversational agents.
+
+From 2023 onward, virtually every major tech company introduced or integrated LLM-based conversational systems — examples include Google's Bard, Microsoft's integration of GPT-4 into Bing and Office, Meta's various AI assistants, and a myriad of startup offerings. Conversational AI has put a spotlight on the upper layers of the AI stack: algorithms and applications. It's not just about raw hardware; it's also about model refinement, data control (since these models learn from vast datasets, raising data governance and privacy questions), and user interface design for integrating AI into workflows.
+
+A frequently cited analysis by PwC estimated that AI (including such productivity improvements) could contribute around $15.7 trillion to the global economy by 2030.⁸ Sectors like retail, finance, and healthcare are poised to reap large gains as AI augments human labour.⁹ ¹⁰
+
+In summary, along this first axis of "type of AI," the 2022–2030 landscape is defined by training pushing the frontier of compute scale (and becoming a strategic asset for whoever can do it), inference becoming a massive ongoing operational demand (necessitating new infrastructure dedicated to AI services), and conversational/generative applications driving AI into everyday use (creating new markets and expectations).
+
+### The AI Value Chain: Energy, Infrastructure, GPUs, Models, and Applications
+
+The second axis to consider is the AI industry stack — the full spectrum of components required to deliver AI solutions from raw energy up to user-facing applications. A key insight of the current landscape is that AI is not a mere software tool; it's an entire value chain. Weakness or absence in any layer of this chain means a country or company cannot capture the full economic value — instead, value will flow to whoever provides the missing pieces.
+
+**Energy Supply.** Modern AI, especially at scale, consumes enormous amounts of electricity. Power is the first and most fundamental input — without sufficient, reliable energy, nothing else in the AI stack can function.
+
+AI data centres require large amounts of electricity to power high-performance hardware such as GPUs, and this demand is growing rapidly.¹¹ On average, in conventional data centers, IT equipment accounts for approximately 60% of electricity use,¹² but in AI-centric facilities this proportion can be even higher due to the power-hungry nature of GPUs.
+
+A single advanced AI chip today can draw 400–700 watts or more¹³ — several times a typical server CPU — and a rack of such chips can demand 30–50 kW or higher. Next-generation 2024 chips are expected to approach 1.2 kilowatts each.¹⁴ By 2027, average rack power in cutting-edge data centers is anticipated to exceed 50 kW per rack (up from approximately 36 kW in 2023).¹⁵
+
+Nations rich in affordable, clean energy have a potential competitive advantage for hosting AI infrastructure. Canada's abundance of hydroelectric power and cool climate are touted as assets for high-density computing centers.¹⁶ On the flip side, places with strained grids are seeing regulatory pushback on new data centers — Ireland and the Netherlands, for instance, temporarily paused data center build-outs to assess impacts on electricity supply.¹⁷ ¹⁸
+
+**Data Center Infrastructure.** In the AI era, data centers are evolving into "AI factories" — more akin to industrial plants than traditional server rooms. High-performance AI workloads produce concentrated heat and require advanced cooling (e.g. liquid cooling for racks, or even immersion cooling for the hottest chips). The networking within these data centers is also specialized: AI training clusters need ultra-high bandwidth and low latency between GPUs (often using InfiniBand or NVLink fabrics) to operate as one giant machine.
+
+The UAE's upcoming 5 gigawatt AI campus is one extreme, aiming to host multiple companies' AI hardware in one gargantuan site.²⁰ ²¹
+
+For Canada, recent reports indicate the data center market is expanding quickly, with over 10 GW of total IT capacity either operational or in pipeline.²² Key regions are Toronto, Montreal, and Alberta, which account for about 93% of capacity.²³ Major projects, such as Alberta's Wonder Valley (planned 5.6 GW IT load),²⁴ exemplify ambitions to create GPU-ready mega-sites. The federal government has also directed funding — notably a commitment of C$240 million to support Cohere in developing AI data centers, specifically the Bell "AI Fabric" project expected to add 500 MW of capacity for AI workloads.²⁵
+
+> **Key finding:** A 100 MW facility of CPUs is not comparable to a 100 MW facility of AI accelerators in terms of AI capability. Canada must measure its data center capacity in terms of "AI capacity" (GPU slots or petaflops available) rather than just energy or floor space.
+
+**Compute Hardware (GPUs and Accelerators).** This is the core engine of the AI stack. Modern AI progress has been tightly coupled with advances in specialized hardware — predominantly GPUs — which accelerate the linear algebra calculations at the heart of machine learning.
+
+GPUs have effectively become the "brains" of AI data centers, often contributing over 90% of the computational power in servers that have them.²⁶ NVIDIA's market share and margins are so strong that its data center GPUs carry gross margins around 75%, reflecting their strategic value.²⁷
+
+NVIDIA introduced a platform called QODA (Quantum Optimized Device Architecture) in 2022, essentially an extension of CUDA to interface with quantum processors,²⁸ ²⁹ enabling hybrid quantum-classical algorithms.³⁰ ³¹
+
+It has been aptly said that "compute is the oil of modern AI" — without sovereign or assured access to it, other advantages (talent, research ideas) cannot be fully realized.³² Less than 2% of global AI-grade GPU clusters are located in Canada. Our world-class AI researchers and startups will struggle to scale or even retain their IP if they have to "queue or overpay abroad" for computing time.³³
+
+**Algorithms and AI Models.** This layer is where much of Canada's historical strength lies: we are a country that has punched above its weight in fundamental AI research. Canadian researchers pioneered techniques like backpropagation, contributed to the development of deep learning and reinforcement learning, and more recently were key in inventing the Transformer architecture (the backbone of today's LLMs).
+
+We host world-renowned AI institutes (Vector Institute, Mila, AMII) and have educated a significant fraction of the global AI talent.³⁴
+
+However, in the industry phase from 2022 onward, algorithms have undergone industrialization. What began as academic experiments are now productized models requiring continual engineering. The frontier of model development now often involves training runs costing tens of millions of dollars. There has been a shift of the AI model development epicentre from universities to well-funded industrial labs.
+
+Canada's challenge is to ensure our strong research pipeline translates into applied, large-scale model development that happens on Canadian soil or under Canadian control — otherwise we risk remaining an "intellectual exporter" while others reap the commercial rewards.³⁵ ³⁶
+
+One promising development is Cohere, founded by alumni of Google Brain in Toronto, which focuses on creating large language models for business and enterprise use. It has raised over $1.27 billion in venture funding (the most of any Canadian AI startup),³⁷ differentiating by focusing on enterprises with customizable models.³⁸ Cohere has partnerships with cloud providers and reportedly with NVIDIA/CoreWeave for a dedicated data center.³⁹ ⁴⁰
+
+Policy can encourage this by supporting national compute resources and perhaps by funding "sovereign AI" models — Canadian-pretrained language models that understand our bilingual context and values.⁴¹ ⁴²
+
+**Applications and Industry Solutions.** At the top of the stack are the applications — where AI delivers tangible value and productivity gains in the economy. This includes consumer applications (chatbots, smart assistants, recommendation systems) and an even larger opportunity in enterprise and government applications (AI-driven analytics, predictive maintenance, AI-enhanced drug discovery, etc.).
+
+Surveys indicate that a majority of Canadian small and mid-size enterprises cite cost, expertise, and uncertainty as barriers to AI adoption.⁴³
+
+Canada has a growing ecosystem of applied AI startups tackling various industries — Coveo in Quebec focusing on AI in enterprise search, Waabi in Toronto building AI for autonomous trucking, Ada in Toronto for AI customer service chatbots, among others. Nurturing these solution-focused companies is as important as the deep tech side, because they bring AI to end-users.
+
+Government can play a catalytic role at this layer by being a major first adopter. The public sector has vast services (from healthcare administration to border services to tax and benefits processing) that could be improved with AI, and government procurement or sandboxes for AI solutions could both improve services and give Canadian AI firms reference projects to springboard from.
+
+### The Current Global Landscape (2022–2025)
+
+Globally, an AI arms race is underway across value chain components. The United States leads in many areas — its big tech companies are pouring resources into ever-larger AI model training and building new data centers (U.S. hyperscalers alone are projected to spend on the order of $1.6–$1.7 trillion on infrastructure between 2025 and 2029).⁴⁵ The Gulf states are investing petrodollars to become hosting hubs for AI (as seen by the UAE's 5 GW campus and Saudi plans for 500 MW of AI capacity).⁴⁶
+
+For Canada, which is a mid-sized economy and closely allied with the US, this global context means we have partners to leverage but also fierce competition to stay relevant. We will not outspend the US or China — but we can identify niches and strategic combinations of our strengths (talent, power, stable environment) to punch above our weight.
+
+The misconception that any data center equals AI capacity must be dispelled. Our data centers must host significant GPU clusters to count in the AI race. Similarly, the notion that having a few AI startups or research labs means we're set is misleading unless those startups can scale at home.
+
+Financial flows will follow the full value chain: if we lack GPU hardware, our researchers will rent time from US clouds (sending money out). If we lack domestic models, our industries will pay API fees to foreign AI firms. If we lack applications companies, our businesses will hire foreign consultancies or buy foreign software that embeds AI. Each gap is a funnel of economic value leaving Canada, or an opportunity cost of jobs not created here.
+
+## Beyond 2030: Outlook for the Next Epoch
+
+Looking beyond 2030, we foresee the AI industry continuing its trajectory as a general-purpose technology, increasingly embedded in all facets of economy and society. By the early 2030s, AI might become as ubiquitous and assumed in business as computing or electricity — a background capability that every competitive organization uses.
+
+**Hardware and Architectures.** The 2030s will likely bring more specialized AI hardware. The current dominance of GPUs may be challenged by new paradigms: improved AI-specific ASICs (application-specific chips), possibly leveraging 3D chip architectures or photonics for faster data transfer, and eventually, early quantum accelerators for certain tasks.
+
+NVIDIA's efforts with CUDA-QODA indicate the industry is preparing for hybrid quantum-classical computing workflows for AI.²⁸ ³¹
+
+For Canada, which has strength in semiconductor research and photonics, this could be an area to innovate — for instance, harnessing Canadian photonic computing research for AI (companies like Xanadu working on photonic quantum computers could be aligned with our AI strategy).
+
+**Algorithms and Capabilities.** By 2030+, current large models might evolve into something closer to artificial general intelligence (AGI) on certain dimensions. We expect models to keep getting larger up to a point, but there will also be efforts to make them more efficient, interpretable, and secure. Multi-modal AI (systems that seamlessly integrate vision, language, sound, etc.) will be more mature, enabling more human-like understanding of context.
+
+**Global AI Ecosystem.** Geopolitically, the split between AI "haves" and "have-nots" may widen. By 2030 the major AI powers (US, China, and possibly a coalition in the EU or others) will have integrated AI deeply into their economies and defence. Middle-tier countries will need alliances or niches to remain relevant. Canada's best strategy likely remains aligning with trusted partners (US, Europe) for shared resources.
+
+There is also the positive scenario where AI becomes a heavily traded service: countries with strong AI infrastructure could export AI services globally. Canada could aspire to be such a provider in niches like bilingual models, AI for mining (leveraging our mining industry expertise), or AI for resource management and climate tech. But that will require conscious capacity-building now.
+
+## Strategic Recommendations for Canada
+
+To ensure Canada can ride the current AI wave and secure a strong position into the next decade, a strategic, coordinated approach is needed. Below are five key recommendations focusing on bolstering the entire AI value chain domestically and removing bottlenecks that currently impede progress.
+
+### 1. Treat AI Infrastructure as a Strategic National Asset
+
+Canada should recognize AI compute capacity (especially GPU clusters) as critical infrastructure on par with our ports, highways, and power grids.⁴⁷ The recent commitment of $2 billion to a Sovereign AI Compute Strategy (announced in late 2024) is a good start,⁴⁸ ³⁹ but it should be seen as Phase 1.
+
+Consider establishing a Canadian AI Compute Cloud accessible to researchers, startups, and industry with subsidized credits — similar to a federated GPU cloud targeting 10 exaFLOPs by 2027. Alongside this, introduce incentives like a Compute Investment Tax Credit to encourage private data center operators to build AI-focused capacity.⁴⁹
+
+The goal is to dramatically raise Canada's share of global AI compute from the current less than 2% toward a level commensurate with our economic size (for reference, Canada is approximately 2–3% of global GDP, so a target might be 2–5% of global AI compute capacity as a medium-term goal).
+
+### 2. Align Data Center Expansion with AI Needs
+
+Government and industry should collaborate to ensure data center growth is steered toward AI. Concrete actions include: cataloguing the GPU/AI readiness of existing and upcoming data centers; targeting incentives or funding support to AI-specific builds; and working with utilities and regulators to guarantee power for AI projects.
+
+Crucially, reorient our national metrics: begin reporting Canada's "AI compute capacity" in government tech strategy documents (e.g. number of petaflops or GPU count available domestically) as a success indicator, rather than just number of data centers or IT load in megawatts. The underlying principle is: it's not a data center if it's not doing significant AI. All major new facilities should be "AI-enabled by design."
+
+### 3. Secure the Semiconductor Supply Chain
+
+Hardware is a choke point. The federal government should make it a priority to secure a stable supply of state-of-the-art AI chips for Canadian industry and research. This could involve bulk purchase agreements or partnerships with manufacturers, and supporting local companies like Tenstorrent (Toronto-based, designing AI chips) or photonics firms (e.g. Xanadu) through grants or government procurement commitments.
+
+Canada could establish a dedicated program or centre for AI Accelerator research at one of our national labs or universities, ensuring we build expertise in the next generation of computing (quantum, neuromorphic, etc.). If quantum computing is likely to intersect AI, align our Quantum Strategy with our AI Strategy.
+
+### 4. Double Down on Applied AI Development
+
+Fund a collaboration between AI institutes (Mila, Vector, AMII) and industry to train sovereign AI models that understand Canadian official languages and values. Open-source these models so Canadian companies and governments can use them without depending on foreign APIs.⁴¹ ⁴²
+
+The government's recent funding announcements (like the $240M to Cohere's data center, or $2.4B in Budget 2024 for computing and AI safety research) are positive, but these should tie into outcomes: what Canadian-owned IP or platforms will result?⁵⁰
+
+On the industry solutions side, stimulate adoption and "market pull" through Challenge Programs: identify key sectors (mining, agriculture, healthcare, public service delivery) and issue grand challenges or pilot funding for integrating AI solutions. Implement an AI Adoption Tax Credit for companies investing in AI technologies. Expand programs like the Industrial Research Assistance Program (IRAP) to specifically target AI solution integration for traditional businesses.
+
+Modernize procurement and regulations to not hinder AI deployment. The federal government should review procurement rules that currently favour established large vendors and make it hard for innovative AI SMEs to win contracts. Set aside a portion of government IT procurement specifically for emerging AI solutions.
+
+### 5. Leverage Canada's Strengths to Attract Global AI Investment
+
+Canada should market itself as a premier destination for AI projects, given our unique advantages: plenty of clean energy, a stable democracy with rule of law, and a reputation for trustworthy AI and diversity. Specifically target and attract AI-specific investments: encourage foreign hyperscalers to build their next AI cloud region in Canada and negotiate conditions such that a portion of that capacity is available to Canadian researchers or companies at favourable terms.
+
+Two safeguards are essential: first, ensure ownership and IP clauses so the resulting intellectual property or a significant share of benefits remain in Canada. Second, prevent solely extractive scenarios — if a big cloud builds here, perhaps 10–20% of that compute should be earmarked for Canadian startups or government use on preferential terms.⁵¹
+
+Canada should also continue to champion multilateral efforts on AI governance and standards. By being a thought leader in responsible AI, we can punch above our weight diplomatically and ensure international rules don't unfairly disadvantage smaller players.
+
+## Conclusion
+
+In the coming years, AI will be a key determinant of economic prosperity and strategic autonomy. Canada finds itself at a crossroads — we have enviable assets in this new landscape, yet we also face significant gaps. The evolution of the AI industry along the two axes described (the variety of AI activities and the stack of enabling resources) teaches us that partial measures won't suffice.
+
+Building a few data centers, or funding a few startups, or publishing a strategy document — none of these alone will position Canada to seize the AI opportunity. What's needed is orchestrated action across all fronts: from electrons to algorithms to adoption. The federal government has a unique convening power to align policies across energy, innovation, skills, and industry development to make this happen.
+
+Canada's vision should be to cultivate a full-stack AI ecosystem at home: one where a breakthrough discovered in a Canadian lab can be developed on Canadian compute resources, scaled by a Canadian company in a Canadian data center, and then applied to benefit Canadian industries and citizens — all while exporting solutions abroad for revenue. Achieving this will boost our productivity and increase our economic resilience and sovereignty in a technology-driven world.
+
+The recommendation is clear: Canada must ensure all key components of the AI value chain are present and robust within our borders. Only then can we truly say we've "covered" the AI industry. Otherwise, money, talent, and data will be diverted to jurisdictions that did, and Canada will miss the boat on the greatest productivity engine of our time. We have a fleeting chance to catch this wave; with strategic focus and bold action, we can — and in doing so, secure prosperity and technological sovereignty for Canadians in the decades ahead.
+
+## Notes
+
+1. Deloitte, "Technology, Media and Telecom Predictions — Gen AI's Impact on Power Consumption," Deloitte Insights, 2024.
+2. Ibid.
+3. Ibid. (Deloitte analysis showing generative AI prompts consume 10–100× more electricity than a typical web search.)
+4. The Next Platform, "OpenAI Datacenters Follow The Money To Abu Dhabi," May 2025.
+5. Ibid.
+6. Deloitte, op. cit.
+7. Ibid.
+8. World Economic Forum / PwC, "Sizing the Prize: What's the Real Value of AI for Your Business and How Can You Capitalise?" 2017.
+9. Ibid.
+10. Ibid.
+11. RCR Wireless, "Five Reasons AI Data Centers Require Massive Amounts of Power," March 2025.
+12. International Energy Agency (IEA), "Energy Demand from AI," 2024.
+13. Deloitte, op. cit.
+14. Ibid.
+15. Ibid.
+16. Data Center Knowledge, "Canada Emerges as Global Data Center Powerhouse," 2025.
+17. Deloitte, op. cit.
+18. Ibid.
+20. The Next Platform, op. cit. (UAE 5 GW AI campus.)
+21. Ibid.
+22. Data Center Knowledge, op. cit.
+23. Ibid.
+24. Ibid.
+25. Ibid. (C$240M to Cohere / Bell AI Fabric.)
+26. The Next Platform, "As CUDA Is To GPU, QODA Is To Quantum Compute," July 2022.
+27. Kearney, "Breaking the GPU Stronghold: Emerging Competition in AI Infrastructure," 2024.
+28. Fierce Electronics, "Nvidia Continues Quantum Moves with New QODA Framework," 2022.
+29. Ibid.
+30. Ibid.
+31. The Next Platform, op. cit. (CUDA-QODA hybrid quantum-GPU computing.)
+32. F. Nayebi, "Catalyzing Canada's AI Advantage: Five Actions to Win the Global AI Race," TheFutureEconomy.ca, 2025.
+33. Ibid.
+34. CVCA Central, "Mapping the Growth of AI in Canada Through Investment," 2024.
+35. Nayebi, op. cit.
+36. Ibid.
+37. CVCA Central, op. cit. (Cohere $1.27B funding.)
+38. Coursera, "Cohere vs. OpenAI: What's the Difference?"
+39. G. Klockwood, "Canadian Sovereign AI."
+40. Ibid.
+41. Nayebi, op. cit.
+42. Ibid.
+43. Ibid.
+45. The Next Platform, op. cit. (U.S. hyperscaler spend $1.6–$1.7T projected 2025–2029.)
+46. Ibid.
+47. Nayebi, op. cit.
+48. Klockwood, op. cit.
+49. Nayebi, op. cit.
+50. Data Center Knowledge, op. cit.
+51. Nayebi, op. cit.
