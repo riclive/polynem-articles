@@ -1,0 +1,149 @@
+---
+title: "From CPUs to GPUs: Positioning Canada in the Accelerated AI Era"
+date: "2026-03-18"
+category: "Technology"
+author: "Richard St-Pierre"
+publication: "Polynem Working Paper"
+summary: "The global computing industry is at an inflection point. As general-purpose CPU computing gives way to GPU-accelerated AI, trillions of dollars in legacy infrastructure face overhaul. Inference demand alone is projected to grow by orders of magnitude — yet Canada holds the lowest AI compute capacity in the G7, roughly half the UK's. This briefing maps the transition's phases through 2035 and makes the case for Canada to become a high-volume, clean compute exporter — leveraging 80%+ non-emitting electricity to turn an infrastructure gap into a strategic trade advantage worth up to $187 billion annually by 2030."
+readTime: "23 min read"
+featured: false
+tags:
+  - gpu-compute
+  - ai-infrastructure
+  - energy-to-compute
+  - canada
+  - productivity
+  - sovereign-cloud
+  - ai-policy
+  - clean-compute
+dateModified: "2026-03-18"
+---
+
+> **Key finding:** AI inference isn't going to 100× or 1,000×… it's going to 1,000,000,000× (one billion×). Inference, not training, will be the dominant consumer of global compute by 2030, with approximately 40% of Nvidia's data center revenue already from inference deployment.
+
+## Introduction
+
+The global computing industry is at an inflection point. After decades dominated by general-purpose CPU-based computing, we are witnessing a paradigm shift toward accelerated computing powered by GPUs and specialized AI hardware. Nvidia CEO Jensen Huang argues that this transition is inevitable — "general purpose computing is over" and the future lies in accelerated computing and AI.¹ This briefing outlines what Huang's CPU-to-GPU transition means economically and technologically, the implications for legacy data centres, and the major phases of change expected through 2035. It also highlights Canada's strategic opportunity — including becoming a hub for high-volume AI inference compute and a "clean compute exporter" — and makes the case for proactive public investment and policy support.
+
+## The CPU-to-GPU Transition: A New Era of Accelerated Computing
+
+Huang's core message is that the traditional approach of general-purpose computing can no longer keep up, especially for AI. Chip performance gains from Moore's Law have stagnated, and CPUs alone cannot economically deliver the exponential performance needed for modern AI workloads.¹ Accelerated computing — using GPUs and AI-specific chips alongside CPUs — is the answer. This represents a tectonic shift: Huang notes there are "trillions of dollars of computing infrastructures in the world" that will need to be refreshed and overhauled for accelerated computing.¹
+
+Such a transition is comparable to past industrial revolutions in its impact. Huang calls it a new "industrial revolution" in computing — akin to electricity replacing kerosene or jets replacing propeller planes.¹ The reason is the extraordinary economic leverage of AI. By offloading parallelisable, AI-related tasks to GPUs (which can be tens of thousands of times faster for these tasks), we can dramatically increase productivity and enable entirely new capabilities. Huang envisions AI "co-pilot" systems augmenting human workers: a $10,000 investment in AI alongside a $100,000 employee might double or triple that worker's productivity.¹
+
+Accelerated computing is thus both a technology shift and an economic imperative. GPUs and specialized accelerators are now critical infrastructure for everything from training large AI models to running search engines and recommender systems. The "basic hyperscale computing infrastructure" inside giants like Google, Meta, and ByteDance has already begun moving from CPUs to GPUs for AI tasks like search and recommendations.¹
+
+Critically, this transition involves "extreme co-design" of entire systems. To achieve the needed performance leaps, companies are re-thinking everything from processors to networking and software simultaneously. Nvidia achieved a 100,000× performance increase in 10 years (from the Kepler GPU era to today) through holistic design, and even saw a 30× jump in one year between its Hopper and Blackwell GPU generations.¹ Successors (codenamed Rubin, Feynman) are expected roughly yearly.² In short, general-purpose computing built on CPUs is giving way to an era of continuous, accelerated innovation in AI-focused computing.
+
+## Impact on Legacy Data Centre Infrastructure
+
+This CPU-to-GPU shift carries significant implications for existing data centres and their investment cycles. Legacy data centres were optimised for CPU-centric workloads; retrofitting or redesigning them for accelerated AI workloads is a substantial undertaking.
+
+**Compute Hardware Upgrades.** AI servers now pair high-core-count CPUs with multiple high-end GPUs, often in ratios of 1:4 or 1:8. This requires new server designs, high-wattage power supplies, and specialised cooling. Much of the existing server fleet globally will need replacement. As Huang states, when the world's compute infrastructure gets refreshed, "it's going to be accelerated computing" — GPU-centric.¹
+
+**Networking and Interconnects.** To fully utilise clusters of GPUs, ultra-high-bandwidth networking is essential. Legacy data centres built for CPU workloads might rely on standard Ethernet networks that become bottlenecks for AI. Modern AI factories use advanced interconnects (Nvidia's NVLink, InfiniBand, or ultra-low-latency Ethernet). Facilities need networking upgrades to handle distributed AI computing across thousands of GPUs.
+
+**Power and Cooling Infrastructure.** GPUs draw significantly more power per node than typical servers. A rack full of AI accelerators can consume 5× to 10× the power of a traditional rack. Most older data centres were not built with such power density in mind. Upgrades may include new power distribution units, liquid cooling systems, and reinforced layouts. Canada's existing HPC infrastructure delivers only ~0.007 petaflops per kilowatt versus ~0.016 in the US — in part because we run older, less power-efficient hardware.
+
+**Storage and Data.** AI workloads demand high-throughput storage to feed data to GPUs. Many legacy data centres may need to upgrade to parallel file systems or NVMe-based storage networks to avoid IO bottlenecks. Every layer of the stack — compute, memory, storage, networking, physical plant — is touched by the AI transition.
+
+**Capital Investment Cycle.** The scale and speed of this overhaul are impacting investment cycles. Nvidia's pipeline with cloud partners involves "hundreds of billions of dollars" to build out AI infrastructure for Microsoft Azure, Oracle Cloud, CoreWeave, and others.¹ Hyper-scalers have all announced multi-year, multibillion-dollar expansions focused on AI capacity. The risk for legacy data centres is that staying on the sidelines means falling far behind on efficiency and capability.
+
+Expect a wave of capital expenditure as companies replace CPU servers with GPU-based systems, upgrade network backbones, and reinforce power and cooling. Huang suggests it may amount to trillions in global CAPEX — on the order of "$5 trillion annually" worldwide if AI were to augment all of global GDP by 20%.¹ Computing isn't a routine cost centre anymore — it's strategic infrastructure for the AI economy.
+
+## Global Trends and Phases Through 2035
+
+Over the next decade, we expect a rapid, globally transformative sequence of developments driven by accelerated computing and AI. Several key phases overlap and reinforce each other.
+
+### Soaring Inference Demand
+
+After the initial rush to train large AI models, the world is entering the inference era — deploying AI models at scale in real-world applications. Jensen Huang emphasised that while training has been expensive, inference will dwarf everything: "Inference isn't going to 100× or 1,000×… it's going to 1,000,000,000× (one billion×)."¹ Approximately 40% of Nvidia's data centre revenue already comes from inference deployment.¹
+
+Two factors drive this: the scale of usage (potentially billions of users and devices using AI daily) and the complexity per inference (new AI models perform multi-step "reasoning," meaning each query does far more computation than a simple search). Meta reportedly purchased 350,000 H100 GPUs, with the vast majority (~300k+) dedicated to inference rather than training.³
+
+By 2030, inference workloads are expected to be the dominant consumer of computing power globally. Nations and companies that anticipate this surge can plan capacity now — those that don't may find their infrastructure overwhelmed.
+
+### Build-Out of AI Factories
+
+To meet both training and inference needs, a worldwide build-out of AI data centres — sometimes dubbed "AI factories" — is in full swing. These are hyperscale facilities packed with tens of thousands of GPUs, high-speed networks, and advanced cooling. The scale is unprecedented: Amazon reportedly bought land and power for a 1 GW data centre campus next to a nuclear plant.³ Microsoft and OpenAI are said to be planning a $100 billion AI supercluster by 2028.
+
+Huang announced Nvidia is partnering to build multiple AI factories, including 5–7 GW of capacity with Oracle Cloud.¹ By around 2030, analysts anticipate a "trillion-dollar cluster" might be feasible — essentially an AI training cluster needing ~100 GW of power.⁴ In 2024 alone, total AI-related capex worldwide was estimated around $100–200 billion.³ This build-out will continue into the 2030s until AI infrastructure is as common as today's internet infrastructure.
+
+### Rapid Hardware Iteration
+
+Unlike past computing shifts, the AI hardware ecosystem iterates at an annual (or faster) pace. Nvidia plans to ship next-gen Blackwell in 2024 with a 30× improvement in certain tasks, with successors (Rubin, Feynman) expected roughly yearly.¹ ² Competitors like Google (TPUs), AMD, and emerging AI chip startups are pushing similar cycles.
+
+Each year's delay in adoption could translate to a major competitive gap, given the compound improvements. Policy-wise, this suggests annual assessments and agile investments might be needed; waiting for a perfect long-term solution could mean always chasing a moving target.
+
+### Emergence of Agentic AI Systems
+
+By the early 2030s, AI is expected to evolve from a tool that provides outputs on-demand to autonomous "agent" systems. Huang observes that "AI is no longer a single language model, but a system of models" working in concert — essentially agentic systems that carry out complex tasks.¹ These agents will dramatically increase compute demands (an agent might run many model inferences and spawn new subtasks continuously).
+
+Aschenbrenner and others predict that by around 2027, AI systems may be capable of automating certain AI research and engineering tasks — compressing a decade of algorithmic progress into less than a year, given sufficient compute.⁴ By the 2030s, we may have AI systems that outperform humans at most economically valuable tasks. If managed safely, this heralds an era of extreme productivity and economic growth.
+
+In sum, the period to 2035 will see: an explosion of AI deployment (especially inference), a global race to build the data centres to run it, yearly leaps in hardware capability, and the rise of AI agents that transform how work is done. Those who proactively ride this wave stand to reap enormous benefits. Those who lag may find themselves reliant on others for critical digital resources.
+
+## Canada's Opportunity: Becoming a Clean Compute Powerhouse
+
+For Canada, this global transition offers a strategic opportunity to leverage our unique strengths. Historically, Canada has been strong in AI research (thanks to pioneers like Yoshua Bengio, Geoff Hinton) and early policy support (we were the first nation with a national AI strategy in 2017). However, when it comes to AI computing infrastructure, Canada currently lags behind its peers.
+
+> **Key finding:** Canada has the lowest amount of available AI compute among G7 countries — roughly half that of the UK. Canadian AI startups and researchers must rent compute from foreign cloud providers because domestic options are limited.
+
+A 2024 analysis by The Dais found that Canada has the lowest amount of available AI compute among G7 countries — our total computing capacity is roughly half that of the UK (the next-lowest G7 member).⁶ Many Canadian AI startups and researchers must rent compute from foreign cloud providers because domestic options are limited and expensive. This "AI compute gap" could hinder our ability to scale homegrown AI innovations and risk talent leaving for better-resourced hubs.
+
+### Specialising in High-Volume AI Inference
+
+Inference is poised to be the largest ongoing workload in the AI era. Not every country will have the capacity to handle the surge internally — smaller nations with constrained energy may need to rely on external data centres. Canada, with the right investments, can position itself as an "AI inference hub."
+
+We have key ingredients: abundant land, skilled tech workforce, and crucially low-cost, low-carbon electricity. Canada's grid is over 80% non-emitting (a mix of hydro, nuclear, wind) and we have potential for expansion. In a world where AI energy use is a concern, this is a selling point. By providing AI services with a lower carbon footprint, Canada could attract customers seeking sustainable solutions.⁷
+
+This concept of exporting compute is analogous to how some countries export oil or electricity. Instead of exporting physical commodities, Canada could export compute services (over secure network links) to countries that lack the time, capital, or geography to build enough AI infrastructure themselves.
+
+### Boosting Economic Productivity via AI Adoption
+
+If Canada invests in and adopts AI at scale, the payoff could be enormous. The Accenture/Microsoft white paper estimates that by 2030, generative AI could add up to $187 billion annually to Canada's economy — comprising about $180 billion in productivity gains and $7 billion in new products and services.⁵ ⁸ That's equivalent to 8–10% of Canada's current GDP.
+
+> **Key finding:** Generative AI could add up to $187 billion annually to Canada's economy by 2030 — comprising $180 billion in productivity gains and $7 billion in new products and services, equivalent to an 8% boost in labour productivity.
+
+These gains come from AI augmenting white-collar and skilled jobs — saving Canadian workers an estimated 125 hours per year each on average.⁵ By building strong domestic AI compute capacity, we enable our small and medium enterprises (which make up 99% of businesses) to leverage AI. Investing in AI infrastructure isn't just about the tech sector — it's about injecting AI-driven productivity into the whole economy.
+
+### Exporting Clean Compute as a Strategic Asset
+
+If Canada becomes a major provider of AI compute services internationally, it would bring not only economic gains but strategic trade and geopolitical benefits. Access to computing power is becoming a strategic resource. A Foreign Policy commentary noted that "just as oil once shaped strategic alliances, access to clean compute could dictate future diplomatic ties."⁷
+
+Countries may form new partnerships based on who supplies AI services to whom. European nations facing strict climate targets might prefer outsourcing AI workloads to Canada with surplus clean energy, rather than running them on domestic coal-heavy grids. By being a "clean AI compute exporter," Canada leverages its natural advantages (clean energy, political stability) to gain a digital advantage.
+
+## Public Investment and Policy Support
+
+Seizing the CPU-to-GPU transition will require coordinated public policy action. The market on its own may underinvest given the scale and strategic nature of the infrastructure needed.
+
+**Invest in National AI Infrastructure.** Public funding is needed to expand Canada's AI compute capacity dramatically. The $2B AI Compute Access Fund is a start,¹⁰ but we may need an order of magnitude more over the next decade. The government can support AI supercomputing hubs — a federated GPU cloud accessible to businesses and researchers, aiming for 10 exaflops by 2027.
+
+**Leverage Clean Energy for AI.** Align AI strategy with Canada's clean energy advantage. Identify sites near large hydroelectric plants or new nuclear installations as designated AI data centre zones. Fast-track permitting and consider public-private partnerships for power distribution and cooling infrastructure.⁹
+
+**Support Skills and Talent Development.** Expand AI-related programs at universities, invest in polytechnic training for high-performance computing technicians, and maintain immigration policies to attract global talent. A skilled workforce ensures the $180B productivity gain is realised.⁵
+
+**Foster AI Adoption in Traditional Industries.** Targeted grants or tax credits for SMEs implementing AI solutions. Public sector procurement driving demand. Broad adoption drives the productivity gains and helps diffuse AI benefits beyond the tech sector.⁵
+
+**Position Canada as a Trusted Exporter.** Create frameworks for international clients to safely host AI workloads in Canada. Address data sovereignty agreements and market Canada's robust privacy and security standards as an export product.
+
+**Economic and Fiscal Returns.** The projected $187B addition to GDP by 2030 could translate into roughly $30B in additional annual government revenues. That easily justifies multi-billion dollar up-front investments now.
+
+## Conclusion
+
+The transition from CPUs to GPUs — from general-purpose to accelerated AI computing — is a foundational shift that will reshape the global economy and geopolitical landscape through 2035. It promises immense gains in productivity and entirely new industries, much as previous industrial revolutions did. For Canada, the stakes are high: we can either invest and ride this wave, or risk being left behind with obsolete infrastructure and lagging growth.
+
+The good news is Canada has the ingredients to succeed — world-class AI talent, abundant clean energy, and a stable environment for investment. Huang's vision that "general purpose computing is over; the future is accelerated computing and AI" is one we should embrace. With thoughtful public-private collaboration, Canada can harness this future, drive our economy forward, and share our "clean compute" capacity with the world — ensuring we not only thrive in the age of AI, but help shape it for the better.
+
+## Notes
+
+1. Nvidia CEO Jensen Huang, remarks on accelerated computing, AI inference demand, and infrastructure transition, CES/GTC conferences, 2024–2025.
+2. Nvidia GPU roadmap: Hopper (2022), Blackwell (2024), Rubin and Feynman architectures announced for annual cadence.
+3. Leopold Aschenbrenner, "Situational Awareness," June 2024. (Data on global AI investments, Meta 350k GPUs, trillion-dollar cluster projections.)
+4. Ibid. (Projections on automated AI research, agentic systems, and superintelligence timeline.)
+5. Accenture and Microsoft, "Canada's Generative AI Opportunity," 2024. ($187B economic impact, $180B productivity gains, 8% labour productivity boost by 2030.)
+6. The Dais (Toronto Metropolitan University), "Canada's AI Compute Gap," 2024. (Canada lowest G7 compute, ~50% of UK capacity.)
+7. SETA, "Hidden Cost of AI: Energy Crisis," 2023. (Clean compute hubs, UAE and Canada positioning as exporters.)
+8. Microsoft Canada, remarks on $187B economic opportunity and AI adoption urgency, 2024.
+9. RBC Climate Action Institute, "Power Struggle: How AI Is Challenging Canada's Electricity Grid," 2025.
+10. Government of Canada, AI Compute Access Fund ($2B) and sovereign compute strategy announcements, 2024.

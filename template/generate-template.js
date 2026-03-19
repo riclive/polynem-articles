@@ -313,14 +313,14 @@ function noteEntry(number, text) {
       new TextRun({
         text: `${number}  `,
         font: "Arial",
-        size: 16,
+        size: 12, // 6pt
         superScript: true,
         color: C.muted,
       }),
       new TextRun({
         text: text,
         font: "Arial",
-        size: 16,
+        size: 12, // 6pt
         color: C.muted,
       }),
     ],

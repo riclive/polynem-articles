@@ -8,6 +8,9 @@ Senior Digital Sovereignty Advisor at Levio and CEO of the Sovereign Data Allian
 ## Articles
 
 - [AI Industry Evolution and Value Chain for Canada](https://richardstpierre.com/articles/ai-industry-evolution-value-chain-canada): Canada's AI ambitions face a critical disconnect: while data center investment is booming, less than 2% of global AI-grade GPU clusters reside on Canadian soil. This analysis maps the full AI value chain and argues that measuring capacity in megawatts rather than GPU petaflops conceals Canada's true competitive position.
+- [Digital Sovereignty in the National Context: A Multi-Axis Strategic Framework](https://richardstpierre.com/articles/digital-sovereignty-multi-axis-framework): A five-level sovereignty framework — from basic data residency to full sovereign cloud — mapped across sovereignty depth, data sensitivity, and governance maturity, with encryption key control as the linchpin.
+- [From CPUs to GPUs: Positioning Canada in the Accelerated AI Era](https://richardstpierre.com/articles/from-cpus-to-gpus-accelerated-ai-era): The global computing industry is at an inflection point. Canada holds the lowest AI compute capacity in the G7 — this briefing maps the transition through 2035 and makes the case for Canada as a clean compute exporter.
+- [Urgency: The Window for Action Is Narrowing](https://richardstpierre.com/articles/urgency-window-for-action-narrowing): Canada is dead last among OECD advanced economies for projected GDP per capita growth through 2060. With only 0.7% of global AI compute capacity, a phased roadmap from first six months to year five.
 
 ## Author
 
@@ -19,7 +22,9 @@ Oxford, Harvard.
 ## Topics
 
 AI infrastructure, AI value chain, GPU compute, sovereign cloud, energy-to-compute,
-Canadian AI policy, productivity, digital sovereignty, AI governance, national strategy.
+Canadian AI policy, productivity, digital sovereignty, AI governance, national strategy,
+encryption, defence strategy, coalition architecture, critical infrastructure, brain drain,
+procurement reform, clean compute.
 
 ## Contact
 
